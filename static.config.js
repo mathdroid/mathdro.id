@@ -1,3 +1,4 @@
+const React = require("react");
 const fs = require("fs");
 const klaw = require("klaw");
 const path = require("path");
@@ -47,6 +48,7 @@ function getPosts() {
 }
 
 export default {
+  siteRoot: "https://mathdro.id",
   inlineCss: true,
   renderToHtml: (render, Comp) => renderStylesToString(render(<Comp />)),
   getSiteData: () => ({
