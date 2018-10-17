@@ -40,23 +40,9 @@ const MobileNav = styled.nav`
   }
 `;
 
-const Gradient = styled.div`
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(to right, #8888ff 0%, #ff8888 100%);
-  @media (min-width: 768px) {
-    display: none;
-  }
-`;
-
 const App = () => (
   <Router>
     <React.Fragment>
-      <Gradient />
       <Nav />
       <Main>
         <Routes />
