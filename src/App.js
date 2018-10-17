@@ -35,16 +35,18 @@ const MobileNav = styled.nav`
     a.active {
       color: #fff;
       text-decoration: none;
+      font-weight: bold;
     }
   }
 `;
 
 const Gradient = styled.div`
-  ${"" /* position: fixed;
+  display: none;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0; */} width: 100vw;
-  height: 0.25rem;
+  right: 0;
+  height: 4px;
   background: linear-gradient(to right, #8888ff 0%, #ff8888 100%);
   @media (min-width: 768px) {
     display: none;
