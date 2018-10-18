@@ -5,7 +5,7 @@ import { injectGlobal } from "react-emotion";
 
 // Your top level component
 import App from "./App";
-
+// import "reset-css";
 const resetCss =
   'a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,main,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}[hidden]{display:none}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}';
 
@@ -14,35 +14,18 @@ injectGlobal`
   * {
     box-sizing: inherit;
   }
-  ::-moz-selection { /* Code for Firefox */
-    background: #ff88ff;
-}
+  ::selection, ::-moz-selection {
+    background: #aa55aa;
+  }
 
-::selection {
-    background: #ff88ff;
-}
   html {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background: #fff; /* fallback for old browsers */
-    ${
-      "" /* background: -webkit-linear-gradient(
-      to top left,
-      #aaa,
-      #fff 50%
-    );  */
-    }
-    /* Chrome 10-25, Safari 5.1-6 */
-    ${
-      "" /* background: linear-gradient(
-      to top left,
-      #aaa,
-      #fff 50%
-    );  */
-    }
+    background: #fff;
+    
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    ${"" /* background-repeat: no-repeat; */}
+    
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
       monospace;
     font-weight: lighter;

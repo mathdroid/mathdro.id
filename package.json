@@ -30,7 +30,6 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-plugin-emotion": "^9.2.6",
-    "babel-plugin-universal-import": "^3.1.2",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-react-tools": "1.x.x",

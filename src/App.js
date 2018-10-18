@@ -3,7 +3,7 @@ import { Router, Link } from "react-static";
 import { hot } from "react-hot-loader";
 import styled from "react-emotion";
 import Routes from "react-static-routes";
-// import "./app.css";
+
 import Nav from "./components/main-nav";
 import Footer from "./components/main-footer";
 
