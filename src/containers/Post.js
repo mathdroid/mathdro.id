@@ -8,7 +8,7 @@ import Utterances from "react-utterances";
 import Hero from "../components/hero";
 import Content from "../components/content";
 import Card from "../components/card";
-import { H3 } from "../components/typography";
+import { H2, H3 } from "../components/typography";
 //
 
 const PostCard = styled(Card)`
@@ -71,7 +71,7 @@ export default withRouteData(({ post }) => (
         <div className="card-title">
           <div className="post-title">
             <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
-            <H3>{post.data.title}</H3>
+            <H2>{post.data.title}</H2>
           </div>
 
           <Link exact to="/blog/" className="back">
@@ -84,7 +84,7 @@ export default withRouteData(({ post }) => (
           escapeHtml={false}
         />
       </PostCard>
-      <SectionLabel>Comments:</SectionLabel>
+      <SectionLabel id={"comments"}>Comments:</SectionLabel>
       <CommentCard>
         <Utterances repo={"mathdroid/mathdro.id"} type={"pathname"} />
       </CommentCard>

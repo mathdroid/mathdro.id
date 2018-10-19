@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "react-emotion";
 import { SiteData } from "react-static";
+import { formatRelative } from "date-fns";
 
 import Content from "../components/content";
 
 const FooterStyles = styled.footer`
-  background: #16161d;
+  background-image: linear-gradient(to bottom right, #2d2d2d 0%, #16161d 100%);
   color: white;
   width: calc(100% - 2rem);
   padding: 4rem 1rem;
@@ -31,7 +32,13 @@ const Footer = () => (
         <Content>
           {" "}
           <p>> Powered by React Static and Netlify.</p>
-          <p>> Latest build: {lastBuild}.</p>
+          <p>
+            > Latest build:{" "}
+            <time title={lastBuild}>
+              {formatRelative(lastBuild, new Date())}
+            </time>
+            .
+          </p>
           <p>> License: The MIT License &copy; 2018 Muhammad Mustadi.</p>
           <label>
             > Feedback: <input />
