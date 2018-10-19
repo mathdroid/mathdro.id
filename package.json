@@ -10,12 +10,16 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
+    "copy": "^0.3.2",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.12",
     "gray-matter": "^4.0.1",
     "imagemin": "^6.0.0",
     "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "is-progressive": "^3.0.0",
     "klaw": "^3.0.0",
+    "ls": "^0.2.1",
     "moment": "^2.20.1",
     "prop-types": "^15.6.2",
     "react": "^16.0.0",

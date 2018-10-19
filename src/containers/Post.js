@@ -51,24 +51,26 @@ margin-top: 6rem;
   }
 `;
 export default withRouteData(({ post }) => (
-  <Content>
-    <PostCard>
-      <div className="card-title">
-        <div className="post-title">
-          <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
-          <H3>{post.data.title}</H3>
-        </div>
+  <React.Fragment>
+    <Hero backgroundImage={post.data.thumbnail} />
+    <Content>
+      <PostCard>
+        <div className="card-title">
+          <div className="post-title">
+            <Moment format="MMMM Do, YYYY">{post.data.date}</Moment>
+            <H3>{post.data.title}</H3>
+          </div>
 
-        <Link exact to="/blog/" className="back">
-          back
-        </Link>
-      </div>
-      <img className="image" src={post.data.thumbnail} alt="" />
-      <Markdown
-        className="react-markdown"
-        source={post.content}
-        escapeHtml={false}
-      />
-    </PostCard>
-  </Content>
+          <Link exact to="/blog/" className="back">
+            back
+          </Link>
+        </div>
+        <Markdown
+          className="react-markdown"
+          source={post.content}
+          escapeHtml={false}
+        />
+      </PostCard>
+    </Content>
+  </React.Fragment>
 ));

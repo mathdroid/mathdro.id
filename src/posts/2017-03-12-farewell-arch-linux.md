@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: 'Farewell Arch Linux'
+title: "Farewell Arch Linux"
 date: 2017-03-12T16:31:35.212Z
-thumbnail: /uploads/image2.jpg
+thumbnail: /media/arch.png
 ---
 
 Wasn't an easy decision, but I just removed my LVM partition for you, Arch Linux.

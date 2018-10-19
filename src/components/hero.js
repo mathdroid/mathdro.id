@@ -5,7 +5,9 @@ const Hero = styled.header`
   height: calc(50vh - 6rem);
   background: ${props => props.background || "#fafafa"};
   ${props =>
-    props.backgroundImage ? `background-image: ${props.backgroundImage};` : ""};
+    props.backgroundImage
+      ? `background-image: url(${props.backgroundImage});`
+      : ""};
 `;
 
 export default Hero;
