@@ -29,7 +29,8 @@
     "react-markdown": "^4.0.3",
     "react-moment": "^0.8.1",
     "react-static": "^5.9.12",
-    "react-universal-component": "^3.0.0"
+    "react-universal-component": "^3.0.0",
+    "react-utterances": "^0.6.4"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

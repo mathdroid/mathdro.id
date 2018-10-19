@@ -3,6 +3,7 @@ import { withRouteData, Link } from "react-static";
 import Moment from "react-moment";
 import Markdown from "react-markdown";
 import styled from "react-emotion";
+import Utterances from "react-utterances";
 
 import Hero from "../components/hero";
 import Content from "../components/content";
@@ -50,6 +51,18 @@ margin-top: -8rem;
     background: #f0f0f0;
   }
 `;
+
+const CommentCard = styled(Card)`
+  .react-utterences {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+`;
+
+const SectionLabel = styled(H3)`
+  margin-top: 4rem;
+`;
+
 export default withRouteData(({ post }) => (
   <React.Fragment>
     <Hero backgroundImage={post.data.thumbnail} />
@@ -71,6 +84,10 @@ export default withRouteData(({ post }) => (
           escapeHtml={false}
         />
       </PostCard>
+      <SectionLabel>Comments:</SectionLabel>
+      <CommentCard>
+        <Utterances repo={"mathdroid/mathdro.id"} type={"pathname"} />
+      </CommentCard>
     </Content>
   </React.Fragment>
 ));

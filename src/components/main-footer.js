@@ -2,6 +2,8 @@ import React from "react";
 import styled from "react-emotion";
 import { SiteData } from "react-static";
 
+import Content from "../components/content";
+
 const FooterStyles = styled.footer`
   background: #16161d;
   color: white;
@@ -26,12 +28,15 @@ const Footer = () => (
   <SiteData
     render={({ lastBuild }) => (
       <FooterStyles>
-        <p>> Powered by React Static and Netlify.</p>
-        <p>> Latest build: {lastBuild}.</p>
-        <p>> License: The MIT License &copy; 2018 Muhammad Mustadi.</p>
-        <label>
-          > Feedback: <input />
-        </label>
+        <Content>
+          {" "}
+          <p>> Powered by React Static and Netlify.</p>
+          <p>> Latest build: {lastBuild}.</p>
+          <p>> License: The MIT License &copy; 2018 Muhammad Mustadi.</p>
+          <label>
+            > Feedback: <input />
+          </label>
+        </Content>
       </FooterStyles>
     )}
   />

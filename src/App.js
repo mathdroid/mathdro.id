@@ -14,6 +14,7 @@ const Main = styled.main`
   width: 100%;
   max-width: 100vw;
   min-height: 100vh;
+  padding-bottom: 8rem;
 `;
 
 const MobileNav = styled.nav`
