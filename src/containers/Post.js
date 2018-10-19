@@ -11,7 +11,7 @@ import { H3 } from "../components/typography";
 //
 
 const PostCard = styled(Card)`
-margin-top: 6rem;
+margin-top: -8rem;
   h3 {
     margin-top: 0rem;
     margin-bottom: 0rem;

@@ -33,7 +33,7 @@ export default () => (
     </Hero>
     <Content>
       <C2>
-        <img src="/uploads/odi.jpg" alt="" />
+        <img src="/media/odi.jpg" alt="" />
       </C2>
       <Card>
         <Markdown
