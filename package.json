@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "react-static start",
+    "start": "yarn run image:process & react-static start",
     "stage": "react-static build --staging",
-    "build": "node src/util/imagemin.js && react-static build",
-    "serve": "serve dist -p 3000"
+    "build": "yarn run image:process & react-static build",
+    "serve": "serve dist -p 3000",
+    "lint": "eslint src",
+    "image:process": "node src/util/imagemin.js"
   },
   "dependencies": {
     "copy": "^0.3.2",
@@ -36,6 +38,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-plugin-emotion": "^9.2.6",
+    "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-react-tools": "1.x.x",

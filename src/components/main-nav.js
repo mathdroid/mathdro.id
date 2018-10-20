@@ -115,9 +115,9 @@ const Nav = styled.ul`
 `;
 
 const Logo = () => (
-  <div className={"site-logo"}>
-    <div className={"left"} />
-    <div className={"right"} />
+  <div className="site-logo">
+    <div className="left" />
+    <div className="right" />
   </div>
 );
 
@@ -129,7 +129,7 @@ const Title = styled(H1)`
 
 const MainNav = () => (
   <Header>
-    <Link exact to="/" className={"header-left"}>
+    <Link exact to="/" className="header-left">
       <Logo />
       <SiteData render={({ title }) => <Title>{title}</Title>} />
     </Link>
