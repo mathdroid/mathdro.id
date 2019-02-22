@@ -1,7 +1,3 @@
 [build]
   publish = "dist"
   command = "yarn build"
-
-[[redirects]]
-  from = "/ojk"
-  to = "https://apakah-terdaftar-di-ojk.netlify.com"

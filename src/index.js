@@ -26,15 +26,19 @@ injectGlobal`
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    ${
+      "" /* font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
       monospace;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 16px; */
+    }
+    
     color: hsla(0, 0%, 15%, 0.8);
     @media (max-width: 768px) {
       font-size: 14px;
     }
   }
+  
 
   body {
     display: flex;

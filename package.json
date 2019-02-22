@@ -12,6 +12,8 @@
     "image:process": "node src/util/imagemin.js"
   },
   "dependencies": {
+    "@reactions/component": "^2.0.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.19",
     "copy": "^0.3.2",
     "date-fns": "^2.0.0-alpha.23",
     "emotion": "^9.2.6",
@@ -29,6 +31,7 @@
     "react-dom": "^16.0.0",
     "react-emotion": "^9.2.6",
     "react-hot-loader": "^4.0.0-beta.21",
+    "react-load-script": "^0.0.6",
     "react-markdown": "^4.0.3",
     "react-moment": "^0.8.1",
     "react-static": "^5.9.12",

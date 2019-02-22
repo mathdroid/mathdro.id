@@ -7,19 +7,19 @@ import Button from "./button";
 
 const glitch = keyframes`
     0% {
-      text-shadow: 0px 2px 1px rgba(255,0,255,0.5), 0px -2px 1px rgba(0,255,255,0.5);
+      text-shadow: 0px 2px 1px rgba(255,0,128,0.5), 0px -4px 1px rgba(0,255,255,0.5);
       }
     25% {
-      text-shadow:  4px 0 1px rgba(255,0,255,0.5),  -1px 0 1px rgba(0,255,255,0.5);
+      text-shadow:  4px 0 1px rgba(255,0,128,0.5),  -1px 0 1px rgba(0,255,255,0.5);
       }
     50% {
-      text-shadow:  1px 1px 1px rgba(255,0,255,0.5),  -4px -1px 1px rgba(0,255,255,0.5);
+      text-shadow:  1px 1px 1px rgba(255,0,128,0.5),  -4px -1px 1px rgba(0,255,255,0.5);
     }
     75% {
-      text-shadow:  1px 0 1px rgba(255,0,255,0.5),  -3px 0 1px rgba(0,255,255,0.5);
+      text-shadow:  1px 0 1px rgba(255,0,128,0.5),  -3px 0 1px rgba(0,255,255,0.5);
     }
     100% {
-      text-shadow: 0 3px 1px rgba(255,0,255,0.5), 0 -4px 1px rgba(0,255,255,0.5);
+      text-shadow: 0 3px 1px rgba(255,0,128,0.5), 0 -2px 1px rgba(0,255,255,0.5);
     }
 `;
 
@@ -76,7 +76,7 @@ const Header = styled.nav`
     align-items: center;
   }
   a:hover {
-    animation: ${glitch} 0.5s ease infinite;
+    animation: ${glitch} 0.5s infinite;
   }
   a.active {
     &:hover {

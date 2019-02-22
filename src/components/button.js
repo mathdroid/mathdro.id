@@ -35,12 +35,14 @@ padding: ${
 };
 opacity: ${props.disabled ? "0.5" : "1"};
 box-shadow: ${Shadow.down} rgba(128, 128, 128, 0.4);
-transition: background-position 0.25s ease-out, box-shadow 0.25s ease-out;
+transition-duration: 0.25s;
+transition-timing-function: ease-out;
+transition-property: box-shadow, background-position, transform;
 background-size: 200% auto;
 background-position: left center;
 &:hover {
-  transition: background-position 0.25s ease-in, box-shadow 0.25s ease-in;
-  
+  transition-timing-function: ease-in;
+  transform: translateY(-1px);
   background-position: right center;
 
 box-shadow: ${Shadow.low} rgba(128, 128, 128, 0.4);
