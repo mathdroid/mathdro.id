@@ -16,7 +16,7 @@
     "date-fns": "^2.0.0-alpha.23",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.12",
-    "gray-matter": "^4.0.1",
+    "gray-matter": "^4.0.2",
     "imagemin": "^6.0.0",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-pngquant": "^6.0.0",

@@ -5206,10 +5206,10 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.2
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
   integrity sha1-TK+tdrxi8C+gObL5Tpo906ORpyU=
 
-gray-matter@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.1.tgz#375263c194f0d9755578c277e41b1c1dfdf22c7d"
-  integrity sha512-p0MADBEBl1CohV7nRZ8sVinBexEe3CKVhh0A0QIHKpcbRoxB0VgeMpRPjW/HBHIPLAKrpIIIm5mZ6hKu3E+iQg==
+gray-matter@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/gray-matter/-/gray-matter-4.0.2.tgz#9aa379e3acaf421193fce7d2a28cebd4518ac454"
+  integrity sha512-7hB/+LxrOjq/dd8APlK0r24uL/67w7SkYnfwhNFwg/VDIGWGmduTDYf3WNstLW2fbbmRwrDGCVSJ2isuf2+4Hw==
   dependencies:
     js-yaml "^3.11.0"
     kind-of "^6.0.2"
