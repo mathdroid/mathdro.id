@@ -24,7 +24,7 @@
     "klaw": "^3.0.0",
     "ls": "^0.2.1",
     "moment": "^2.20.1",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-emotion": "^9.2.6",
