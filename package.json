@@ -48,6 +48,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "hoist-non-react-statics": "^3.3.0",
-    "serve": "^10.0.2"
+    "serve": "^10.1.2"
   }
 }
