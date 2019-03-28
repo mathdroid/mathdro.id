@@ -1,3 +1,7 @@
 [build]
   publish = "out"
   command = "yarn netlify"
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/static/robots.txt"
