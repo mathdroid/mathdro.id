@@ -1,9 +1,0 @@
-{
-  "extends": "react-static/.babelrc",
-  "plugins": ["babel-plugin-emotion"],
-  "env": {
-    "production": {
-      "plugins": ["transform-react-remove-prop-types"]
-    }
-  }
-}
