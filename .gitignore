@@ -21,3 +21,4 @@ yarn-error.log*
 tmp/
 public/media/
 .next/
+out/
