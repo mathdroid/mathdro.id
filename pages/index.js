@@ -1,5 +1,5 @@
 import React from "react";
-// import jpg from '../assets/image.jpg'
+import Head from "next/head";
 
 const SvgMathdroid = props => (
   <>
@@ -10,7 +10,7 @@ const SvgMathdroid = props => (
         </clipPath>
       </defs>
       <g id="my-graphic" clipPath="url(#clip)">
-      <image xlinkHref="/static/old.jpg" width="768" height="432"/>
+        <image xlinkHref="/static/image.jpg" width="700" height="468" />
       </g>
     </svg>
 
@@ -24,6 +24,21 @@ const SvgMathdroid = props => (
 
 const Index = props => (
   <>
+    <Head>
+      <title>Mathdroid</title>
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+        key="viewport"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@mathdroid" />
+      <meta name="twitter:creator" content="@mathdroid" />
+      <meta property="og:url" content="https://mathdro.id" />
+      <meta property="og:title" content="Hi, my name is Odi!" />
+      <meta property="og:description" content="This is my website." />
+      <meta property="og:image" content="https://mathdro.id/static/card.jpg" />
+    </Head>
     <SvgMathdroid fill="pink" {...props} />
     <style global jsx>{`
       html,
