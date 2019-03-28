@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 
 const SvgMathdroid = props => (
   <>
@@ -24,21 +23,6 @@ const SvgMathdroid = props => (
 
 const Index = props => (
   <>
-    <Head>
-      <title>Mathdroid</title>
-      <meta
-        name="viewport"
-        content="initial-scale=1.0, width=device-width"
-        key="viewport"
-      />
-      <meta property="og:url" content="https://mathdro.id" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@mathdroid" />
-      <meta name="twitter:creator" content="@mathdroid" />
-      <meta name="twitter:title" content="Hi, my name is Odi!" />
-      <meta name="twitter:description" content="This is my website." />
-      <meta name="twitter:image" content="https://mathdro.id/static/card.jpg" />
-    </Head>
     <SvgMathdroid fill="pink" {...props} />
     <style global jsx>{`
       html,
