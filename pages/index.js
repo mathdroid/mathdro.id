@@ -19,7 +19,7 @@ const Index = props => {
       <Container>
         <Hero fill="pink" {...{ dark }} />
         <div>
-          <h1>Muhammad Mustadi.</h1>
+          <h1>Muhammad Mustadi. (Odi)</h1>
           <h1>Software. Product. Design.</h1>
           <h1>Jakarta, Indonesia.</h1>
 
@@ -31,6 +31,10 @@ const Index = props => {
         </div>
 
         <Toggle onChange={toggle} />
+        <footer>
+          &copy; 2019 mathdroid.{" "}
+          <a href="https://github.com/mathdroid/mathdro.id">Repository</a>.
+        </footer>
       </Container>
       <style jsx global>
         {`
@@ -52,12 +56,14 @@ const Index = props => {
           justify-content: flex-start;
           width: 100%;
           max-width: 48rem;
-          position: relative;
-          top: -50vh;
-          margin: 8rem 0;
+          margin-top: -50vh;
+          padding-top: 8rem;
         }
         a {
           color: inherit;
+        }
+        footer {
+          padding: 4rem 0;
         }
       `}</style>
     </>

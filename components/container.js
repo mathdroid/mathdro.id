@@ -18,7 +18,7 @@ const Container = props => (
           animation: fadein 2s;
           color: inherit;
           background: inherit;
-          padding: 0 1rem;
+          padding: 0 1rem 8rem 1rem;
         }
       `}
     </style>
