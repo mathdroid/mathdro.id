@@ -42,12 +42,13 @@ const Toggle = ({ initiallyDark = false, onChange = () => null }) => {
           padding: 0;
           border: none;
           font: inherit;
-          font-size: 2rem;
+          font-size: 1rem;
           background: none;
-          position: absolute;
-          top: 2rem;
-          right: 2rem;
+          position: fixed;
+          top: 1rem;
+          right: 1rem;
           font-weight: 200;
+          transition: color 0.5s ease-in-out;
         }
 
         /* Firefox fix - https://bugzilla.mozilla.org/show_bug.cgi?id=140562 */

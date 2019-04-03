@@ -18,7 +18,18 @@ const Index = props => {
       </Head>
       <Container>
         <Hero fill="pink" {...{ dark }} />
-        <h1>Muhammad Mustadi</h1>
+        <div>
+          <h1>Muhammad Mustadi.</h1>
+          <h1>Software / Product / Design.</h1>
+          <h1>Jakarta, Indonesia.</h1>
+
+          <h1>
+            <a href="https://github.com/mathdroid">Github</a> /{" "}
+            <a href="https://twitter.com/mathdroid">Twitter</a> /{" "}
+            <a href="https://instagram.com/mathdroid">Instagram</a>
+          </h1>
+        </div>
+
         <Toggle onChange={toggle} />
       </Container>
       <style jsx global>
@@ -26,10 +37,29 @@ const Index = props => {
           body {
             background: ${dark ? "black" : "white"};
             color: ${dark ? "white" : "dark"};
-            transition: color 0.5s ease-in-out;
+          }
+          h1 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
           }
         `}
       </style>
+      <style jsx>{`
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          width: 100%;
+          max-width: 48rem;
+          position: relative;
+          top: -40vh;
+          padding: 8rem 0;
+        }
+        a {
+          color: inherit;
+        }
+      `}</style>
     </>
   );
 };
