@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "netlify": "yarn build && next export"
+    "export": "next export",
+    "netlify": "yarn build && yarn export"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
