@@ -21,6 +21,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-plugin-emotion": "^9.2.6",
+    "cz-conventional-changelog": "2.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.6.0",
@@ -32,5 +33,10 @@
     "eslint-plugin-react": "^7.12.4",
     "hoist-non-react-statics": "^3.3.0",
     "serve": "^10.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
