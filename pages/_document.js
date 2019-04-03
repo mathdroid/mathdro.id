@@ -26,8 +26,19 @@ class MyDocument extends Document {
             name="twitter:image"
             content="https://mathdro.id/static/card.jpg"
           />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+          @import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+          `
+            }}
+          />
         </Head>
-        <body className="custom_class">
+        <body>
           <Main />
           <NextScript />
         </body>
