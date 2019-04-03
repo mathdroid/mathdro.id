@@ -10,15 +10,10 @@ const Container = props => (
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
           animation: fadein 2s;
           color: inherit;
           background: inherit;
-          padding: 0 1rem 8rem 1rem;
+          padding: 0 1rem;
         }
       `}
     </style>
