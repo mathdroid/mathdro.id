@@ -20,13 +20,13 @@ const Index = props => {
         <Hero fill="pink" {...{ dark }} />
         <div>
           <h1>Muhammad Mustadi.</h1>
-          <h1>Software / Product / Design.</h1>
+          <h1>Software. Product. Design.</h1>
           <h1>Jakarta, Indonesia.</h1>
 
           <h1>
-            <a href="https://github.com/mathdroid">Github</a> /{" "}
-            <a href="https://twitter.com/mathdroid">Twitter</a> /{" "}
-            <a href="https://instagram.com/mathdroid">Instagram</a>
+            <a href="https://github.com/mathdroid">Github</a>.{" "}
+            <a href="https://twitter.com/mathdroid">Twitter</a>.{" "}
+            <a href="https://instagram.com/mathdroid">Instagram</a>.
           </h1>
         </div>
 
@@ -53,8 +53,8 @@ const Index = props => {
           width: 100%;
           max-width: 48rem;
           position: relative;
-          top: -40vh;
-          padding: 8rem 0;
+          top: -50vh;
+          margin: 8rem 0;
         }
         a {
           color: inherit;
