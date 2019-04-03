@@ -12,7 +12,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
-    "next": "^8.0.3",
+    "next": "^8.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-tilt": "^0.1.4"
