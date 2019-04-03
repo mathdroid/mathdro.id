@@ -17,7 +17,7 @@ const Index = props => {
         <title>Mathdroid</title>
       </Head>
       <Container>
-        <Hero fill="pink" {...props} />
+        <Hero fill="pink" {...{ dark }} />
         <h1>Muhammad Mustadi</h1>
         <Toggle onChange={toggle} />
       </Container>
@@ -26,6 +26,7 @@ const Index = props => {
           body {
             background: ${dark ? "black" : "white"};
             color: ${dark ? "white" : "dark"};
+            transition: color 0.5s ease-in-out;
           }
         `}
       </style>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = props => (
+const Hero = ({ dark, ...props }) => (
   <>
     <svg data-name="Hero" viewBox="0 0 580.43 89.29" {...props}>
       <defs>
@@ -9,8 +9,17 @@ const Hero = props => (
         </clipPath>
       </defs>
       <image
+        className={dark ? "hidden" : "show"}
         clipPath="url(#clip)"
         xlinkHref="/static/image.jpg"
+        width="100%"
+        height="512px"
+        y="-256px"
+      />
+      <image
+        className={dark ? "show" : "hidden"}
+        clipPath="url(#clip)"
+        xlinkHref="/static/white.jpg"
         width="100%"
         height="512px"
         y="-256px"
@@ -27,6 +36,12 @@ const Hero = props => (
       path {
         width: 100%;
         max-width: 48rem;
+      }
+      image {
+        transition: all 0.4s ease-out;
+      }
+      .hidden {
+        opacity: 0;
       }
     `}</style>
   </>
