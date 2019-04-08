@@ -1,16 +1,42 @@
 import React from "react";
 import Head from "next/head";
+import { css } from "@emotion/core";
+import { withTheme } from "emotion-theming";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
 import Toggle from "../components/light-dark-toggle";
 
+const Main = props => (
+  <main
+    css={css`
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 48rem;
+      margin-top: -50vh;
+      padding-top: 8rem;
+    `}
+    {...props}
+  />
+);
+
+const Footer = props => (
+  <footer
+    css={css`
+      padding: 4rem 0;
+    `}
+    {...props}
+  />
+);
+
 const Index = props => {
-  const [dark, setDark] = React.useState(false);
-  const toggle = () => {
-    setDark(!dark);
-    console.log(dark);
-  };
+  const {
+    theme: { dark },
+    setDark
+  } = props;
   return (
     <>
       <Head>
@@ -18,7 +44,7 @@ const Index = props => {
       </Head>
       <Container>
         <Hero fill="pink" {...{ dark }} />
-        <div>
+        <Main>
           <h1>Muhammad Mustadi. (Odi)</h1>
           <h1>Software. Product. Design.</h1>
           <h1>Jakarta, Indonesia.</h1>
@@ -28,46 +54,16 @@ const Index = props => {
             <a href="https://twitter.com/mathdroid">Twitter</a>.{" "}
             <a href="https://instagram.com/mathdroid">Instagram</a>.
           </h1>
-        </div>
+        </Main>
 
-        <Toggle onChange={toggle} />
-        <footer>
+        <Toggle {...{ dark, setDark }} />
+        <Footer>
           &copy; 2019 mathdroid.{" "}
           <a href="https://github.com/mathdroid/mathdro.id">Repository</a>.
-        </footer>
+        </Footer>
       </Container>
-      <style jsx global>
-        {`
-          body {
-            background: ${dark ? "black" : "white"};
-            color: ${dark ? "white" : "dark"};
-          }
-          h1 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-          }
-        `}
-      </style>
-      <style jsx>{`
-        div {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          width: 100%;
-          max-width: 48rem;
-          margin-top: -50vh;
-          padding-top: 8rem;
-        }
-        a {
-          color: inherit;
-        }
-        footer {
-          padding: 4rem 0;
-        }
-      `}</style>
     </>
   );
 };
 
-export default Index;
+export default withTheme(Index);

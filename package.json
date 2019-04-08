@@ -11,8 +11,10 @@
     "netlify": "yarn build && yarn export"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.9",
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.10",
+    "emotion-theming": "^10.0.10",
     "next": "^8.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
