@@ -39,7 +39,7 @@ const Toggle = ({ dark, setDark = () => null, phaseTimeout = 50 }) => {
         `}
         onClick={toggle}
       >
-        {dark ? "Dark" : "Light"} {phases[phaseIndex]}
+        {phases[phaseIndex]}
       </Button>
     </>
   );
