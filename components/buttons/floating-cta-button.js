@@ -14,7 +14,6 @@ const FloatingCTA = ({ theme, ...props }) => (
       bottom: 1rem;
       max-width: 48rem;
       width: calc(100% - 32px);
-      width: 100%;
       transition: background 0.4s ease-in-out;
       box-shadow: 0 4px 4px ${theme.dark ? "none" : "rgba(0, 0, 0, 0.5)"};
       color: ${theme.dark ? theme.colors.black : theme.colors.white};
