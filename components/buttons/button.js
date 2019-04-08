@@ -28,6 +28,9 @@ const Button = props => (
     type="button"
     css={css`
       ${buttonResetCSS}
+      line-height: 2;
+      border-radius: 4px;
+      cursor: pointer;
     `}
     onClick={() => null}
     {...props}

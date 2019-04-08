@@ -4,8 +4,8 @@ import { css } from "@emotion/core";
 import Button from "./button";
 
 const phases = ["🌑", "🌒", "🌓", "🌔", "🌕", "🌖", "🌗", "🌘"];
-const darkIndex = 0;
-const lightIndex = 4;
+const darkIndex = 4;
+const lightIndex = 0;
 
 const Toggle = ({ dark, setDark = () => null, phaseTimeout = 50 }) => {
   const [phaseIndex, setPhaseIndex] = React.useState(

@@ -5,7 +5,8 @@ import { withTheme } from "emotion-theming";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
-import Toggle from "../components/light-dark-toggle";
+import Toggle from "../components/buttons/light-dark-toggle";
+import FloatingCTA from "../components/buttons/floating-cta-button";
 
 const Main = props => (
   <main
@@ -26,7 +27,7 @@ const Main = props => (
 const Footer = props => (
   <footer
     css={css`
-      padding: 4rem 0;
+      padding: 4rem 0 8rem 0;
     `}
     {...props}
   />
@@ -61,6 +62,9 @@ const Index = props => {
           &copy; 2019 mathdroid.{" "}
           <a href="https://github.com/mathdroid/mathdro.id">Repository</a>.
         </Footer>
+        <FloatingCTA>
+          <a href="mailto:muhammad.mustadi@gmail.com">Contact</a>
+        </FloatingCTA>
       </Container>
     </>
   );

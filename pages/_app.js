@@ -31,6 +31,7 @@ class MyApp extends App {
           <Global
             styles={css`
               body {
+                margin: 0;
                 background: ${dark ? "black" : "white"};
                 color: ${dark ? "white" : "black"};
               }
