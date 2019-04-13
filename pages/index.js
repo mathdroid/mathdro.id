@@ -51,7 +51,7 @@ const Index = props => {
           <h1>Jakarta, Indonesia.</h1>
 
           <h1>
-            <a href="https://github.com/mathdroid">Github</a>.{" "}
+            <a href="https://github.com/mathdroid">GitHub</a>.{" "}
             <a href="https://twitter.com/mathdroid">Twitter</a>.{" "}
             <a href="https://instagram.com/mathdroid">Instagram</a>.
           </h1>
