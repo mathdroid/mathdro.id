@@ -21,6 +21,14 @@ const colors = {
     "#1b5055"
   ]
 };
+colors.light = {
+  text: colors.black,
+  background: colors.white
+};
+colors.dark = {
+  text: colors.white,
+  background: colors.black
+};
 
 const fonts = {
   default: `'Inter', sans-serif`,
