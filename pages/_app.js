@@ -27,7 +27,7 @@ class MyApp extends App {
     const { dark } = this.state;
     return (
       <Container>
-        <ThemeProvider theme={{ ...theme, dark: dark ? "dark" : "light" }}>
+        <ThemeProvider theme={{ ...theme, dark: dark }}>
           <Global
             styles={css`
               body {
