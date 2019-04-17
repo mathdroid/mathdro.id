@@ -2,10 +2,11 @@ import React from "react";
 import Head from "next/head";
 import { css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
+import Toggle from "react-moon-toggle";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
-import Toggle from "../components/buttons/light-dark-toggle";
+import { buttonResetCSS } from "../components/buttons/button";
 import FloatingCTA from "../components/buttons/floating-cta-button";
 
 const Main = props => (
@@ -57,7 +58,21 @@ const Index = props => {
           </h1>
         </Main>
 
-        <Toggle {...{ dark, setDark }} />
+        <Toggle
+          {...{ dark, setDark }}
+          css={css`
+            ${buttonResetCSS}
+            &:focus {
+              outline: none;
+            }
+            color: ${dark ? "white" : "black"};
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            font-weight: 200;
+            transition: color 0.5s ease-in-out;
+          `}
+        />
         <Footer>
           &copy; 2019 mathdroid.{" "}
           <a href="https://github.com/mathdroid/mathdro.id">Repository</a>.
