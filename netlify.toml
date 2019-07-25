@@ -5,3 +5,8 @@
 [[redirects]]
   from = "/robots.txt"
   to = "/static/robots.txt"
+
+
+[[redirects]]
+  from = "/keybase.txt"
+  to = "/static/keybase.txt"

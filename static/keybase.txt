@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/mathdroid
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mathdro.id
+  * I am mathdroid (https://keybase.io/mathdroid) on keybase.
+  * I have a public key with fingerprint A736 307A 2053 E7AF 459D  D794 CA0A 04FE A58A D8AC
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101667f1ac08f8f6c3e9af402c06ee76942e4b04be55db3a571b8e94bd43517e9430a",
+      "fingerprint": "a736307a2053e7af459dd794ca0a04fea58ad8ac",
+      "host": "keybase.io",
+      "key_id": "ca0a04fea58ad8ac",
+      "kid": "0101667f1ac08f8f6c3e9af402c06ee76942e4b04be55db3a571b8e94bd43517e9430a",
+      "uid": "2580e000a181ae2701bf80f1857b9f19",
+      "username": "mathdroid"
+    },
+    "service": {
+      "hostname": "mathdro.id",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1564022419,
+  "expire_in": 157680000,
+  "prev": "109aadd42725e2953093cbcad6897cf8ed75e3804f0595c52a89090ce1cb33ce",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMImAnicrZJbbAxRGMe3SyuaEJSKuiSGkLDZnDMzZ2bOJjTSIm5VPLgE68zMme7Y
+3Zk1M7ttNaVNkUVdYtOQtgiJaCshLo3LgyKVPohEREhcEiHKAy+kcUk2nGl4kHj0
+dM758vv/z//78vWPGREoLhDsh49jg9N2FTy4ezwd2IJLcw2cauv1XKSBi9PhgyZ0
+6nrRuKlzEQ5AACVJNiDRgGIohqQJFBNDBLwGJEplCYs8FVUgqhQhXRUIkqGqUCyq
+uiggKLObAAgX4gzTqqFOyjEtj9kSWZAEIBMeIIHKzA9hXZexqBFAgGhQghSiK0Rj
+wpjt+goWTiUuDZs2q7FHdDjeP/j/nDs9bMcjBVAAAIEKJJSXAVQNBRhQQbKKDYh9
+0KWORZKU0UnixXTHZsrGEMfKGVOj/mT9Vv5GwowJcSnH9mzNTrB6zPNSbsTXefUp
+H6ylavS3RVQ1LZ2NkSky1HFN2+IikJGaZ/qeEEmsPV6EOMTRupTp0KjpE0iWFBYd
++P/QDLOEABOi6yIv84jyGAkAC5qqEV1SsKwZCtVlRAWFzRUgjDTEEwUDDDQKNVUQ
+WCt+Uzssm4vwIstJapina9ZYxEs7lGu8d2fzyEBBcaCoMOjvV6B49Lg/W/esflR+
+XMfr9Lt078Q3J3qqWk82Z/HAst5y+X7udlSHQvzZhDnamnxDdfeetg3xc9XfrrkX
+3I2zMlFrQYdwpSxRt3b8iOav1sq33dtnbEuto+vLPgazYz/snF9I+oa4ziNvWziw
+eZMHm18ps7Mf7ufnrb5FB06TSWb5mZnTzy/5+Xxta8Wx0N2Rz69vsxJmb8uiWxdz
+Jf0lfXOXHu2/uXdFVza7f3D5FOXQi6dTaxdMDjsHDl/8fuVsKHj5c+21aT+HmpuG
+HkfKBqpeFs74UppceL6tqaX9VFfPlN2DfRXvw5259n3bK0vylfqloh/vkq0Hb8wT
+F1/4seblKvHR057SV1frn2wNfvoFlyk/iQ==
+=8eyP
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mathdroid
+
+==================================================================
