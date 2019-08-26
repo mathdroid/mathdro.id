@@ -23,7 +23,7 @@
     "react-tilt": "^0.1.4"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-emotion": "^9.2.6",
     "cz-conventional-changelog": "2.1.0",
     "eslint": "^5.16.0",
