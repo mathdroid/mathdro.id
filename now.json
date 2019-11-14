@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "alias": ["mathdro.id"],
+  "builds": [{ "src": "package.json", "use": "@now/next" }]
+}
