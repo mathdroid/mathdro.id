@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "alias": ["mathdro.id"],
+  "alias": ["mathdro.id", "ojek.app"],
   "builds": [{ "src": "package.json", "use": "@now/next" }]
 }
