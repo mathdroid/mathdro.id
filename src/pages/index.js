@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
 import {
   Heading,
@@ -9,7 +8,8 @@ import {
   Text,
   Icon,
   Stack,
-  Flex
+  Flex,
+  Box
 } from "@chakra-ui/core";
 
 import Hero from "../components/hero";
@@ -32,10 +32,6 @@ const Main = props => (
 const Footer = props => <Flex as="footer" py="8rem" {...props} />;
 
 const Index = props => {
-  const {
-    theme: { dark },
-    setDark
-  } = props;
   return (
     <>
       <Head>
@@ -54,7 +50,7 @@ const Index = props => {
             Jakarta, Indonesia.
           </Heading>
 
-          <Text as="nav" fontSize="1.875rem" fontWeight="bold">
+          <Text as="nav" fontSize={["1.875rem", "2.25rem"]} fontWeight="bold">
             <Link href="https://github.com/mathdroid">
               <ChakraLink href="https://github.com/mathdroid" isExternal>
                 Github <Icon name="external-link" mx="2px" />
@@ -74,11 +70,8 @@ const Index = props => {
             </Link>
             .{" "}
             <Link href="/live">
-              <ChakraLink href="/live">
-                Stream <Icon name="external-link" mx="2px" />
-              </ChakraLink>
+              <ChakraLink href="/live">Stream</ChakraLink>
             </Link>
-            .
           </Text>
         </Main>
 
@@ -95,9 +88,7 @@ const Index = props => {
             .
           </Text>
         </Footer>
-        <FloatingCTA>
-          <a href="mailto:hello@mathdro.id">Contact</a>
-        </FloatingCTA>
+        <FloatingCTA>Contact</FloatingCTA>
       </Container>
     </>
   );

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import NextLink from "next/link";
 import { Button, Heading, Text, Stack, Link } from "@chakra-ui/core";
 import { FaYoutube, FaTwitch } from "react-icons/fa";
@@ -6,6 +7,9 @@ import Container from "../components/container";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 export default () => (
   <>
+    <Head>
+      <title>Mathdroid's Livestreams</title>
+    </Head>
     <DarkModeToggle />
     <Container height="100vh">
       <Stack
@@ -19,24 +23,26 @@ export default () => (
         <Text alignSelf="flex-start">
           I do code live streams every day @ 1900 (UTC+7)
         </Text>
-        <Button
-          width="100%"
-          leftIcon={FaYoutube}
-          variant="solid"
-          variantColor="red"
-        >
-          <NextLink href="https://www.youtube.com/watch?v=rVgsWQepuLk">
-            Youtube
-          </NextLink>
-        </Button>
-        <Button
-          width="100%"
-          leftIcon={FaTwitch}
-          variant="solid"
-          variantColor="purple"
-        >
-          <NextLink href="https://www.twitch.tv/mathdroid">Twitch</NextLink>
-        </Button>
+        <Link isExternal href="https://www.youtube.com/watch?v=rVgsWQepuLk">
+          <Button
+            width="16rem"
+            leftIcon={FaYoutube}
+            variant="solid"
+            variantColor="red"
+          >
+            YouTube
+          </Button>
+        </Link>
+        <Link isExternal href="https://www.twitch.tv/mathdroid">
+          <Button
+            width="16rem"
+            leftIcon={FaTwitch}
+            variant="solid"
+            variantColor="purple"
+          >
+            Twitch
+          </Button>
+        </Link>
         <NextLink href="/">
           <Link textDecoration="underline">Back to main page</Link>
         </NextLink>
