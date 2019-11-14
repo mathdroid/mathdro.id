@@ -10,8 +10,8 @@ export default () => (
     <Container height="100vh">
       <Stack
         spacing="8"
-        maxWidth="48rem"
-        width="calc(100% -32px)"
+        maxWidth="24rem"
+        width="calc(100% - 1rem)"
         mt="8rem"
         alignItems="center"
       >
@@ -20,7 +20,7 @@ export default () => (
           I do code live streams every day @ 1900 (UTC+7)
         </Text>
         <Button
-          width="24rem"
+          width="100%"
           leftIcon={FaYoutube}
           variant="solid"
           variantColor="red"
@@ -30,12 +30,12 @@ export default () => (
           </NextLink>
         </Button>
         <Button
-          width="24rem"
+          width="100%"
           leftIcon={FaTwitch}
           variant="solid"
           variantColor="purple"
         >
-          <NextLink href=" https://www.twitch.tv/mathdroid">Twitch</NextLink>
+          <NextLink href="https://www.twitch.tv/mathdroid">Twitch</NextLink>
         </Button>
         <NextLink href="/">
           <Link textDecoration="underline">Back to main page</Link>

@@ -3,7 +3,14 @@ import Head from "next/head";
 import Link from "next/link";
 import { css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
-import { Heading, Link as ChakraLink, Text, Icon } from "@chakra-ui/core";
+import {
+  Heading,
+  Link as ChakraLink,
+  Text,
+  Icon,
+  Stack,
+  Flex
+} from "@chakra-ui/core";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
@@ -11,29 +18,22 @@ import FloatingCTA from "../components/buttons/floating-cta-button";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 
 const Main = props => (
-  <main
+  <Stack
+    spacing="2rem"
     css={css`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: flex-start;
       width: 100%;
       max-width: 48rem;
-      margin-top: -50vh;
+      margin-top: -40vh;
       padding-top: 8rem;
     `}
     {...props}
   />
 );
 
-const Footer = props => (
-  <footer
-    css={css`
-      padding: 4rem 0 8rem 0;
-    `}
-    {...props}
-  />
-);
+const Footer = props => <Flex as="footer" p="8rem" {...props} />;
 
 const Index = props => {
   const {
