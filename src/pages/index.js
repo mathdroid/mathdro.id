@@ -19,21 +19,17 @@ import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 
 const Main = props => (
   <Stack
-    spacing="2rem"
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 48rem;
-      margin-top: -40vh;
-      padding-top: 8rem;
-    `}
+    spacing="1.5rem"
+    width="100%"
+    maxWidth="48rem"
+    mt="-40vh"
+    pt="8rem"
+    px="1rem"
     {...props}
   />
 );
 
-const Footer = props => <Flex as="footer" p="8rem" {...props} />;
+const Footer = props => <Flex as="footer" py="8rem" {...props} />;
 
 const Index = props => {
   const {
@@ -88,11 +84,16 @@ const Index = props => {
 
         <DarkModeToggle />
         <Footer>
-          &copy; 2019 mathdroid.{" "}
-          <ChakraLink isExternal href="https://github.com/mathdroid/mathdro.id">
-            Repository
-          </ChakraLink>
-          .
+          <Text>
+            &copy; 2019 mathdroid.{" "}
+            <ChakraLink
+              isExternal
+              href="https://github.com/mathdroid/mathdro.id"
+            >
+              Repository <Icon name="external-link" mx="2px" />
+            </ChakraLink>
+            .
+          </Text>
         </Footer>
         <FloatingCTA>
           <a href="mailto:hello@mathdro.id">Contact</a>
