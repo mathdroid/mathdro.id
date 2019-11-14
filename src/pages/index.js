@@ -3,44 +3,12 @@ import Head from "next/head";
 import Link from "next/link";
 import { css } from "@emotion/core";
 import { withTheme } from "emotion-theming";
-import Toggle from "react-moon-toggle";
-import {
-  useColorMode,
-  Heading,
-  Link as ChakraLink,
-  Text,
-  Icon
-} from "@chakra-ui/core";
+import { Heading, Link as ChakraLink, Text, Icon } from "@chakra-ui/core";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
-import { buttonResetCSS } from "../components/buttons/button";
 import FloatingCTA from "../components/buttons/floating-cta-button";
-
-const DarkModeToggle = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const isDark = colorMode === "dark";
-  return (
-    <Toggle
-      dark={isDark}
-      setDark={() => {
-        toggleColorMode();
-      }}
-      css={css`
-        ${buttonResetCSS}
-        &:focus {
-          outline: none;
-        }
-        color: ${isDark ? "white" : "black"};
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        font-weight: 200;
-        transition: color 0.5s ease-in-out;
-      `}
-    />
-  );
-};
+import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 
 const Main = props => (
   <main
@@ -121,7 +89,10 @@ const Index = props => {
         <DarkModeToggle />
         <Footer>
           &copy; 2019 mathdroid.{" "}
-          <a href="https://github.com/mathdroid/mathdro.id">Repository</a>.
+          <ChakraLink isExternal href="https://github.com/mathdroid/mathdro.id">
+            Repository
+          </ChakraLink>
+          .
         </Footer>
         <FloatingCTA>
           <a href="mailto:hello@mathdro.id">Contact</a>
