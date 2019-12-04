@@ -13,9 +13,12 @@ class MyApp extends App {
         <CSSReset />
         <Global
           styles={css`
-            html,
             body {
-              background-image: url("/static/dot-grid.png");
+              background-color: #f7fafc;
+            }
+
+            body.dark-mode {
+              background-color: #171923;
             }
           `}
         />
