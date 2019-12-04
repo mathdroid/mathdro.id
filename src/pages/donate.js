@@ -1,7 +1,6 @@
 import Head from "next/head";
 import NextLink from "next/link";
 import { Button, Heading, Text, Stack, Link, Icon } from "@chakra-ui/core";
-import { FaYoutube, FaTwitch } from "react-icons/fa";
 
 import Container from "../components/container";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
@@ -19,33 +18,28 @@ export default () => (
         mt="8rem"
         alignItems="center"
       >
-        <Heading alignSelf="flex-start">Livestreams</Heading>
+        <Heading alignSelf="flex-start">Donate</Heading>
         <Text alignSelf="flex-start">
-          I do code live streams every day @ 2100 (UTC+7)
+          Support me with donations through these platforms!
         </Text>
-        <Link isExternal href="https://www.twitch.tv/mathdroid">
+        <Link isExternal href="https://karyakarsa.com/mathdroid">
           <Button
             width="16rem"
-            leftIcon={FaTwitch}
             variant="solid"
-            variantColor="purple"
+            variantColor="green"
+            rightIcon="external-link"
           >
-            Twitch
+            KaryaKarsa
           </Button>
         </Link>
-
-        <Text alignSelf="flex-start" mt={8}>
-          Recap is available on YouTube (after editing is done)
-        </Text>
-
-        <Link isExternal href="https://www.youtube.com/watch?v=rVgsWQepuLk">
+        <Link isExternal href="https://saweria.co/donate/mathdroid">
           <Button
             width="16rem"
-            leftIcon={FaYoutube}
             variant="solid"
-            variantColor="red"
+            variantColor="green"
+            rightIcon="external-link"
           >
-            YouTube
+            Saweria
           </Button>
         </Link>
         <NextLink href="/">

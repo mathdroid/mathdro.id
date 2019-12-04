@@ -9,12 +9,11 @@ import {
   Icon,
   Stack,
   Flex,
-  Box
+  Button
 } from "@chakra-ui/core";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
-import FloatingCTA from "../components/buttons/floating-cta-button";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 
 const Main = props => (
@@ -50,7 +49,31 @@ const Index = props => {
             Jakarta, Indonesia.
           </Heading>
 
-          <Text as="nav" fontSize={["1.875rem", "2.25rem"]} fontWeight="bold">
+          <Text
+            as="nav"
+            fontSize={["1.875rem", "2.25rem"]}
+            fontWeight="bold"
+            mt={8}
+          >
+            <Link href="/live">
+              <ChakraLink href="/live">
+                Stream <Icon name="link" mx="2px" />
+              </ChakraLink>
+            </Link>
+            {". "}
+            <Link href="/donate">
+              <ChakraLink href="/donate">
+                Support <Icon name="link" mx="2px" />
+              </ChakraLink>
+            </Link>
+          </Text>
+
+          <Text
+            as="nav"
+            fontSize={["1.875rem", "2.25rem"]}
+            fontWeight="bold"
+            mt={8}
+          >
             <Link href="https://github.com/mathdroid">
               <ChakraLink href="https://github.com/mathdroid" isExternal>
                 Github <Icon name="external-link" mx="2px" />
@@ -68,10 +91,7 @@ const Index = props => {
                 Instagram <Icon name="external-link" mx="2px" />
               </ChakraLink>
             </Link>
-            .{" "}
-            <Link href="/live">
-              <ChakraLink href="/live">Stream</ChakraLink>
-            </Link>
+            .
           </Text>
         </Main>
 
@@ -88,7 +108,37 @@ const Index = props => {
             .
           </Text>
         </Footer>
-        <FloatingCTA>Contact</FloatingCTA>
+        <Flex
+          position="fixed"
+          bottom="3"
+          width="calc(100% - 32px)"
+          maxWidth="48rem"
+        >
+          <Link href="/donate">
+            <ChakraLink href="/donate" flexGrow={1} mx={2}>
+              <Button width="100%" variant="outline" variantColor="green">
+                Support
+              </Button>
+            </ChakraLink>
+          </Link>
+          <Link isExternal href="mailto:hello@mathdro.id">
+            <ChakraLink
+              isExternal
+              href="mailto:hello@mathdro.id"
+              flexGrow={3}
+              mx={2}
+            >
+              <Button
+                width="100%"
+                variant="solid"
+                variantColor="green"
+                rightIcon="email"
+              >
+                Contact
+              </Button>
+            </ChakraLink>
+          </Link>
+        </Flex>
       </Container>
     </>
   );
