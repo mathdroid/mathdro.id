@@ -136,7 +136,7 @@ const Index = props => {
                 variantColor="green"
                 rightIcon="email"
               >
-                Contact
+                Send Email
               </Button>
             </ChakraLink>
           </Link>
