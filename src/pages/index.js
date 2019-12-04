@@ -108,11 +108,13 @@ const Index = props => {
             .
           </Text>
         </Footer>
-        <Flex
+        <Container
+          flexDirection="row"
           position="fixed"
-          bottom="3"
+          bottom="0"
           width="calc(100% - 32px)"
           maxWidth="48rem"
+          py={2}
         >
           <Link href="/donate">
             <ChakraLink href="/donate" flexGrow={1} mx={2}>
@@ -138,7 +140,7 @@ const Index = props => {
               </Button>
             </ChakraLink>
           </Link>
-        </Flex>
+        </Container>
       </Container>
     </>
   );
