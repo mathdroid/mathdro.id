@@ -112,7 +112,7 @@ const Index = props => {
           flexDirection="row"
           position="fixed"
           bottom="0"
-          width="calc(100% - 32px)"
+          width="100%"
           maxWidth="48rem"
           py={2}
         >

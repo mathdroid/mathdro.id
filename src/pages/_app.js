@@ -1,31 +1,26 @@
 import React from "react";
 import App from "next/app";
 import { ThemeProvider, CSSReset, ColorModeProvider } from "@chakra-ui/core";
+import { Global, css } from "@emotion/core";
 
 import theme from "../theme";
 
 class MyApp extends App {
-  state = {
-    dark: false
-  };
-
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-    }
-
-    return { pageProps };
-  }
-
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <CSSReset />
+        <Global
+          styles={css`
+            html,
+            body {
+              background-image: url("/static/dot-grid.png");
+            }
+          `}
+        />
         <ColorModeProvider>
-          <Component {...pageProps} />
+          <Component />
         </ColorModeProvider>
       </ThemeProvider>
     );
