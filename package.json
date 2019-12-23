@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/core": "^0.4.1",
-    "@emotion/babel-preset-css-prop": "^10.0.23",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.23",
     "@use-it/interval": "^0.1.3",
