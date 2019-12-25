@@ -1021,10 +1021,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@chakra-ui/core@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/core/-/core-0.4.1.tgz#da94d44b8257c40ea010b17480c2332e9369f1e5"
-  integrity sha512-jOIjlFOY/ne1WjY/Ii8RyNtUBArSuVtSGiDf/zBBAAVnJOf2O5fNZQ5Lu9oXKPqZ58Nb80REnsUuKwbyHcgg3A==
+"@chakra-ui/core@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/core/-/core-0.5.2.tgz#0aa9c059467e7e957098bc07561ed86d80025b0b"
+  integrity sha512-0JL7QDp/fr7xcR9vNS6L3N4MluajboLWdnBeN3xK1Cn2ysTBR++ihew4C6vUm8RTTltxmYLP9t6ccuHDxaOxcQ==
   dependencies:
     "@reach/auto-id" "0.2.0"
     "@styled-system/css" "5.0.13"
@@ -1037,7 +1037,7 @@
     popper.js "^1.15.0"
     pretty-num "0.3.0"
     react-animate-height "2.0.9"
-    react-focus-lock "^2.1.0"
+    react-focus-lock "^2.2.1"
     react-spring "^8.0.27"
     styled-system "5.0.5"
     toasted-notes "3.0.0"
@@ -6562,7 +6562,7 @@ react-error-overlay@5.1.6:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-5.1.6.tgz#0cd73407c5d141f9638ae1e0c63e7b2bf7e9929d"
   integrity sha512-X1Y+0jR47ImDVr54Ab6V9eGk0Hnu7fVWGeHQSOXHf/C2pF9c6uy3gef8QUeuUiWlNb0i08InPSE5a/KJzNzw1Q==
 
-react-focus-lock@^2.1.0:
+react-focus-lock@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.2.1.tgz#1d12887416925dc53481914b7cedd39494a3b24a"
   integrity sha512-47g0xYcCTZccdzKRGufepY8oZ3W1Qg+2hn6u9SHZ0zUB6uz/4K4xJe7yYFNZ1qT6m+2JDm82F6QgKeBTbjW4PQ==
