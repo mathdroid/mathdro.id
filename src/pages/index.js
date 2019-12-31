@@ -61,8 +61,8 @@ const Index = props => {
               </ChakraLink>
             </Link>
             {". "}
-            <Link href="/donate">
-              <ChakraLink href="/donate">
+            <Link href="/support">
+              <ChakraLink href="/support">
                 Support <Icon name="link" mx="2px" />
               </ChakraLink>
             </Link>
@@ -116,8 +116,8 @@ const Index = props => {
           maxWidth="48rem"
           py={2}
         >
-          <Link href="/donate">
-            <ChakraLink href="/donate" flexGrow={1} mx={2}>
+          <Link href="/support">
+            <ChakraLink href="/support" flexGrow={1} mx={2}>
               <Button width="100%" variant="outline" variantColor="green">
                 Support
               </Button>
