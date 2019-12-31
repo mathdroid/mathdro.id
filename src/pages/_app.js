@@ -16,7 +16,7 @@ class MyApp extends App {
             body {
               background-color: #f7fafc;
             }
-
+            
             body.dark-mode {
               background-color: #171923;
             }

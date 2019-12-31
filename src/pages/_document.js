@@ -24,7 +24,7 @@ class MyDocument extends Document {
           <meta name="twitter:description" content="This is my website." />
           <meta
             name="twitter:image"
-            content="https://mathdro.id/static/card.jpg"
+            content="https://mathdro.id/static/m-01.jpg"
           />
           <style
             dangerouslySetInnerHTML={{
