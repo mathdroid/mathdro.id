@@ -26,6 +26,34 @@ class MyDocument extends Document {
             name="twitter:image"
             content="https://mathdro.id/static/m-01.jpg"
           />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png?v=yyQGoMmB44"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png?v=yyQGoMmB44"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png?v=yyQGoMmB44"
+          />
+          <link rel="manifest" href="/site.webmanifest?v=yyQGoMmB44" />
+          <link
+            rel="mask-icon"
+            href="/safari-pinned-tab.svg?v=yyQGoMmB44"
+            color="#5bbad5"
+          />
+          <link rel="shortcut icon" href="/favicon.ico?v=yyQGoMmB44" />
+          <meta name="apple-mobile-web-app-title" content="mathdroid" />
+          <meta name="application-name" content="mathdroid" />
+          <meta name="msapplication-TileColor" content="#2b5797" />
+          <meta name="theme-color" content="#ffffff" />
           <style
             dangerouslySetInnerHTML={{
               __html: `
