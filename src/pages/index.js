@@ -9,12 +9,30 @@ import {
   Icon,
   Stack,
   Flex,
-  Button
+  Button,
+  useColorMode
 } from "@chakra-ui/core";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
+
+const PrimaryButton = props => {
+  const { colorMode } = useColorMode();
+
+  const isDark = colorMode === "dark";
+
+  return (
+    <Button
+      width="100%"
+      variant="solid"
+      bg={isDark ? "white" : "black"}
+      color={isDark ? "black" : "white"}
+      _hover={{ bg: isDark ? "gray.200" : "gray.700" }}
+      {...props}
+    />
+  );
+};
 
 const Main = props => (
   <Stack
@@ -39,22 +57,17 @@ const Index = props => {
       <Container>
         <Hero />
         <Main>
-          <Heading as="h2" fontFamily="default">
+          <Text fontWeight="800" fontSize="2rem" fontFamily="default">
             Muhammad Mustadi. (Odi)
-          </Heading>
-          <Heading as="h2" fontFamily="default">
+          </Text>
+          <Text fontWeight="800" fontSize="2rem" fontFamily="default">
             Software. Product. Design.
-          </Heading>
-          <Heading as="h2" fontFamily="default">
+          </Text>
+          <Text fontWeight="800" fontSize="2rem" fontFamily="default">
             Jakarta, Indonesia.
-          </Heading>
+          </Text>
 
-          <Text
-            as="nav"
-            fontSize={["1.875rem", "2.25rem"]}
-            fontWeight="bold"
-            mt={8}
-          >
+          <Text fontWeight="800" fontSize="2rem" mt={8}>
             <Link href="/live">
               <ChakraLink href="/live">
                 Stream <Icon name="link" mx="2px" />
@@ -68,12 +81,7 @@ const Index = props => {
             </Link>
           </Text>
 
-          <Text
-            as="nav"
-            fontSize={["1.875rem", "2.25rem"]}
-            fontWeight="bold"
-            mt={8}
-          >
+          <Text fontWeight="800" fontSize="2rem" mt={8}>
             <Link href="https://github.com/mathdroid">
               <ChakraLink href="https://github.com/mathdroid" isExternal>
                 Github <Icon name="external-link" mx="2px" />
@@ -118,7 +126,7 @@ const Index = props => {
         >
           <Link href="/support">
             <ChakraLink href="/support" flexGrow={1} mx={2}>
-              <Button width="100%" variant="outline" variantColor="green">
+              <Button width="100%" variant="outline" variantColor="black">
                 Support
               </Button>
             </ChakraLink>
@@ -130,14 +138,7 @@ const Index = props => {
               flexGrow={3}
               mx={2}
             >
-              <Button
-                width="100%"
-                variant="solid"
-                variantColor="green"
-                rightIcon="email"
-              >
-                Send Email
-              </Button>
+              <PrimaryButton rightIcon="email">Send Email</PrimaryButton>
             </ChakraLink>
           </Link>
         </Container>

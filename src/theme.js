@@ -5,7 +5,7 @@ const colors = chakraTheme.colors;
 
 const fonts = {
   default: `'Inter', sans-serif`,
-  vsr: `'Inter var', sans-serif`
+  var: `'Inter var', sans-serif`
 };
 
 const breakpoints = ["40em", "52em", "64em"];

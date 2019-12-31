@@ -4,6 +4,7 @@ import { Button, Heading, Text, Stack, Link, Icon } from "@chakra-ui/core";
 
 import Container from "../components/container";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
+import { H1 } from "../components/H1";
 
 export default () => (
   <>
@@ -19,7 +20,7 @@ export default () => (
         mt="8rem"
         alignItems="center"
       >
-        <Heading alignSelf="flex-start">Support</Heading>
+        <H1 alignSelf="flex-start">Support</H1>
         <Text alignSelf="flex-start">
           Support me with donations through these platforms!
         </Text>

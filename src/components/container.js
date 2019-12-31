@@ -12,6 +12,7 @@ const Container = props => {
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
+      fontFamily="default"
       bg={bgColor[colorMode]}
       color={color[colorMode]}
       {...props}

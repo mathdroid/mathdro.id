@@ -5,6 +5,7 @@ import { FaYoutube, FaTwitch } from "react-icons/fa";
 
 import Container from "../components/container";
 import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
+import { H1 } from "../components/H1";
 export default () => (
   <>
     <Head>
@@ -19,7 +20,7 @@ export default () => (
         mt="8rem"
         alignItems="center"
       >
-        <Heading alignSelf="flex-start">Livestreams</Heading>
+        <H1 alignSelf="flex-start">Livestreams</H1>
         <Text alignSelf="flex-start">
           I do code live streams every day @ 2100 (UTC+7)
         </Text>
