@@ -17,6 +17,12 @@ export default () => {
     <>
       <Head>
         <title>2019 In Review</title>
+
+        <meta name="twitter:title" content="2019 In Review" />
+        <meta
+          name="twitter:description"
+          content="Phew. So. This is my 2019 in review. Brace yourselves."
+        />
       </Head>
       <DarkModeToggle></DarkModeToggle>
       <Container height="100vh">
