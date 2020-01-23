@@ -34,7 +34,7 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
-    "hoist-non-react-statics": "^3.3.1"
+    "hoist-non-react-statics": "^3.3.2"
   },
   "config": {
     "commitizen": {
