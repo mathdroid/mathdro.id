@@ -48,6 +48,16 @@ export default () => (
             Saweria
           </Button>
         </Link>
+        <Link isExternal href="https://ko-fi.com/mathdroid">
+          <Button
+            width="16rem"
+            variant="solid"
+            variantColor="blue"
+            rightIcon="external-link"
+          >
+            Ko-fi
+          </Button>
+        </Link>
         <Text>
           <NextLink href="/">
             <Link textDecoration="underline">
