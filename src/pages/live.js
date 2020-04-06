@@ -4,14 +4,12 @@ import { Button, Heading, Text, Stack, Link, Icon } from "@chakra-ui/core";
 import { FaYoutube, FaTwitch } from "react-icons/fa";
 
 import Container from "../components/container";
-import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 import { H1 } from "../components/H1";
 export default () => (
   <>
     <Head>
       <title>Mathdroid's Livestreams</title>
     </Head>
-    <DarkModeToggle />
     <Container height="100vh">
       <Stack
         spacing="8"

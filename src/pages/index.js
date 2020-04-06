@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { withTheme } from "emotion-theming";
@@ -10,17 +10,22 @@ import {
   Stack,
   Flex,
   Button,
-  useColorMode
+  useColorMode,
 } from "@chakra-ui/core";
 
 import Hero from "../components/hero";
 import Container from "../components/container";
-import { DarkModeToggle } from "../components/buttons/dark-mode-toggle";
 
-const PrimaryButton = props => {
-  const { colorMode } = useColorMode();
+const PrimaryButton = (props) => {
+  const { colorMode, toggleColorMode } = useColorMode();
 
   const isDark = colorMode === "dark";
+
+  useEffect(() => {
+    if (isDark) {
+      toggleColorMode();
+    }
+  }, []);
 
   return (
     <Button
@@ -34,23 +39,23 @@ const PrimaryButton = props => {
   );
 };
 
-const Main = props => (
+const Main = (props) => (
   <Stack
     spacing="1.5rem"
     width="100%"
     maxWidth="48rem"
-    mt="-40vh"
+    mt="-10vw"
     py="8rem"
     px="2rem"
     {...props}
     borderRadius="8px"
-    boxShadow="-8px -8px 16px rgba(255,255,255,0.5), 8px 8px 16px rgba(167, 157, 157, 0.5), 4px 4px 16px rgba(255, 255, 255, 0.5) inset, -4px -4px 16px rgba(167, 157, 157, 0.5) inset"
+    boxShadow="-8px -8px 16px rgba(255,255,255,0.5), 8px 8px 16px rgba(167, 157, 157, 0.5)"
   />
 );
 
-const Footer = props => <Flex as="footer" py="8rem" {...props} />;
+const Footer = (props) => <Flex as="footer" py="8rem" {...props} />;
 
-const Index = props => {
+const Index = (props) => {
   return (
     <>
       <Head>
@@ -105,7 +110,6 @@ const Index = props => {
           </Text>
         </Main>
 
-        <DarkModeToggle />
         <Footer>
           <Text>
             &copy; 2019 mathdroid.{" "}
