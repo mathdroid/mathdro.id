@@ -24,6 +24,19 @@ export default () => (
         <Text alignSelf="flex-start">
           Support me with donations through these platforms!
         </Text>
+        <Heading>Global</Heading>
+        <Link isExternal href="https://ko-fi.com/mathdroid">
+          <Button
+            width="16rem"
+            variant="solid"
+            variantColor="blue"
+            rightIcon="external-link"
+          >
+            Ko-fi
+          </Button>
+        </Link>
+
+        <Heading>Indonesia</Heading>
         <Link isExternal href="https://karyakarsa.com/mathdroid">
           <Button
             width="16rem"
@@ -48,6 +61,7 @@ export default () => (
             Saweria
           </Button>
         </Link>
+
         <Text>
           <NextLink href="/">
             <Link textDecoration="underline">
