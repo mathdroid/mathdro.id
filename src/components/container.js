@@ -4,7 +4,7 @@ import { Flex, useColorMode } from "@chakra-ui/core";
 const Container = props => {
   const { colorMode } = useColorMode();
 
-  const bgColor = { light: "gray.50", dark: "gray.900" };
+  const bgColor = { light: "gray.100", dark: "gray.900" };
 
   const color = { light: "black", dark: "white" };
   return (
@@ -13,11 +13,12 @@ const Container = props => {
       alignItems="center"
       justifyContent="flex-start"
       fontFamily="default"
-      bg={bgColor[colorMode]}
-      color={color[colorMode]}
       {...props}
+      bg="#EFE0E0"
     />
   );
 };
 
+// bg={bgColor[colorMode]}
+// color={color[colorMode]}
 export default Container;

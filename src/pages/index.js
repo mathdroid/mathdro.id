@@ -40,9 +40,11 @@ const Main = props => (
     width="100%"
     maxWidth="48rem"
     mt="-40vh"
-    pt="8rem"
-    px="1rem"
+    py="8rem"
+    px="2rem"
     {...props}
+    borderRadius="8px"
+    boxShadow="-8px -8px 16px rgba(255,255,255,0.5), 8px 8px 16px rgba(167, 157, 157, 0.5), 4px 4px 16px rgba(255, 255, 255, 0.5) inset, -4px -4px 16px rgba(167, 157, 157, 0.5) inset"
   />
 );
 
@@ -131,7 +133,7 @@ const Index = props => {
               </Button>
             </ChakraLink>
           </Link>
-          <Link isExternal href="mailto:hello@mathdro.id">
+          <Link href="mailto:hello@mathdro.id">
             <ChakraLink
               isExternal
               href="mailto:hello@mathdro.id"
