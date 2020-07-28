@@ -16,6 +16,7 @@ class MyApp extends App {
             body {
               background: #111;
               min-height: 100vh;
+              padding-bottom: 8rem;
             }
             *::selection {
               text-shadow: none;

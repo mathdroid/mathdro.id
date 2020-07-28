@@ -3,7 +3,7 @@ import { Button } from "@chakra-ui/core";
 export const SiteButton = (props) => (
   <Button
     variant="outline"
-    width="100%"
+    isFullWidth
     color="white"
     borderColor="#444"
     background="transparent"
