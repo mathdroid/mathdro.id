@@ -4,8 +4,11 @@ import { theme as chakraTheme } from "@chakra-ui/core";
 const colors = chakraTheme.colors;
 
 const fonts = {
-  default: `'Inter', sans-serif`,
-  var: `'Inter var', sans-serif`
+  ...chakraTheme.fonts,
+  // default: `'Inter', sans-serif`,
+  // var: `'Inter var', sans-serif`,
+
+  // heading: `'Inter var', sans-serif`,
 };
 
 const breakpoints = ["40em", "52em", "64em"];
@@ -33,9 +36,9 @@ const theme = {
           />
         </svg>
       ),
-      viewBox: "0 0 3000 3163"
-    }
-  }
+      viewBox: "0 0 3000 3163",
+    },
+  },
 };
 
 export default theme;
