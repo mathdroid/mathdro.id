@@ -17,6 +17,7 @@ const GradientCard = (props) => (
     py="2rem"
     px="1rem"
     borderRadius="8px"
+    border="#1a1a1a 1px solid"
     background="linear-gradient(#1a1a1a, #111 90%)"
     {...props}
   />
@@ -61,7 +62,7 @@ const Index = () => {
           <H1 as="h2">Coming Soon</H1>
           <Paragraph>Some description here</Paragraph>
         </GradientCard>
-        <SimpleGrid columns={2} spacing={10}>
+        <SimpleGrid columns={[1, 2]} spacing="2rem">
           <GradientCard>
             <H1 as="h2">Coming Soon</H1>
             <Paragraph>Some description here</Paragraph>
