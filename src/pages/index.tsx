@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Stack, Link } from "@chakra-ui/core";
+import { Stack, SimpleGrid } from "@chakra-ui/core";
 import { NextSeo } from "next-seo";
 
 import { Headline, H1, Paragraph } from "../components/Typography";
@@ -9,7 +9,7 @@ import { MainLayout } from "../components/layout/MainLayout";
 import { ButtonLink } from "../components/SiteLink";
 
 const SectionStack = (props) => (
-  <Stack spacing="1.5rem" width="100%" {...props} />
+  <Stack spacing="2rem" width="100%" {...props} />
 );
 
 const GradientCard = (props) => (
@@ -17,7 +17,7 @@ const GradientCard = (props) => (
     py="2rem"
     px="1rem"
     borderRadius="8px"
-    background="linear-gradient(#161616, #111 90%)"
+    background="linear-gradient(#1a1a1a, #111 90%)"
     {...props}
   />
 );
@@ -36,6 +36,7 @@ const Index = () => {
       />
       <GradientCard>
         <H1>Muhammad Mustadi</H1>
+
         <Paragraph>
           A full stack software developer, crafting with Typescript, React, and
           Node.js at the moment. Into hackathons, strategy games, and building
@@ -54,33 +55,39 @@ const Index = () => {
       </GradientCard>
 
       <SectionStack>
-        <Headline alignSelf="start">On the web</Headline>
-        <Stack spacing="1rem">
-          <ButtonLink
-            href="https://twitter.com/mathdroid"
-            _hover={{
-              bg: "#1A91DA",
-            }}
-          >
-            Twitter
-          </ButtonLink>
-          <ButtonLink
-            href="https://github.com/mathdroid"
-            _hover={{
-              color: "black",
-              bg: "white",
-            }}
-          >
-            Github
-          </ButtonLink>
-        </Stack>
-      </SectionStack>
-      <SectionStack>
         <Headline>Projects</Headline>
         <GradientCard>
           <Headline>Featured project</Headline>
           <H1 as="h2">Coming Soon</H1>
+          <Paragraph>Some description here</Paragraph>
         </GradientCard>
+        <SimpleGrid columns={2} spacing={10}>
+          <GradientCard>
+            <H1 as="h2">Coming Soon</H1>
+            <Paragraph>Some description here</Paragraph>
+          </GradientCard>
+          <GradientCard>
+            <H1 as="h2">Coming Soon</H1>
+            <Paragraph>Some description here</Paragraph>
+          </GradientCard>
+        </SimpleGrid>
+        <SiteButton>View all projects</SiteButton>
+      </SectionStack>
+
+      <SectionStack>
+        <Headline>Blog</Headline>
+        <GradientCard>
+          <Headline>Featured post</Headline>
+          <H1 as="h2">Coming Soon</H1>
+        </GradientCard>
+      </SectionStack>
+
+      <SectionStack>
+        <Headline alignSelf="start">On the web</Headline>
+        <Stack spacing="1rem">
+          <ButtonLink href="https://twitter.com/mathdroid">Twitter</ButtonLink>
+          <ButtonLink href="https://github.com/mathdroid">Github</ButtonLink>
+        </Stack>
       </SectionStack>
     </MainLayout>
   );

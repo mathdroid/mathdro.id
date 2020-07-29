@@ -1,10 +1,20 @@
-import { Stack, Flex, AlertIcon, Alert, CloseButton } from "@chakra-ui/core";
-import { Headline } from "../Typography";
 import { useState } from "react";
+import Link from "next/link";
+import {
+  Stack,
+  Flex,
+  AlertIcon,
+  Alert,
+  CloseButton,
+  Avatar,
+  Text,
+  Grid,
+} from "@chakra-ui/core";
+import { Headline } from "../Typography";
 
 const MainStack = (props) => (
   <Stack
-    spacing="4rem"
+    spacing="8rem"
     margin="0 auto"
     px="1rem"
     direction="column"
@@ -22,29 +32,54 @@ const MainHeader = ({ title }) => {
       alignItems="start"
       as="nav"
       maxWidth="48rem"
-      m="0 auto"
+      mx="auto"
+      mt={isAlert ? "1rem" : "4rem"}
+      mb="2rem"
       px="1rem"
     >
       {isAlert ? (
-        <Alert status="warning" w="100%" variant="solid">
+        <Alert status="warning" w="100%" my="1rem">
           <AlertIcon />
-          Site is still under reconstruction (Late July 2020). Be patient!
+          <Text color="#aaa">
+            Site is still under reconstruction (Late July 2020). Be patient!
+          </Text>
           <CloseButton
             position="absolute"
             right="8px"
             top="8px"
+            color="#aaa"
             onClick={() => {
               setIsAlert(false);
             }}
           />
         </Alert>
       ) : null}
-      <Headline alignSelf={"start"} mt="4rem" mb="2rem">
-        @mathdroid{title ? `: ${title}` : ""}
-      </Headline>
+
+      <Link href="/" passHref>
+        <Flex as="a" direction="row" justifyContent="start" alignItems="center">
+          <Avatar
+            size="sm"
+            name="mathdroid"
+            src="https://mathdro.id/profile.png"
+            mr=".5rem"
+          />
+          <Headline>@mathdroid{title ? `: ${title}` : ""}</Headline>
+        </Flex>
+      </Link>
     </Flex>
   );
 };
+
+const MainFooter = () => (
+  <Flex
+    alignItems="center"
+    justifyContent="center"
+    py="8rem"
+    background="linear-gradient(#111, #1a1a1a 90%)"
+  >
+    <Headline as="span">With {"<3"} from Indonesia</Headline>
+  </Flex>
+);
 
 interface MainLayoutProps {
   title?: string;
@@ -58,5 +93,6 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   <>
     <MainHeader {...{ title }} />
     <MainStack {...rest}>{children}</MainStack>
+    <MainFooter />
   </>
 );

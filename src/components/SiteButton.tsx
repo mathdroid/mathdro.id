@@ -1,6 +1,11 @@
-import { Button } from "@chakra-ui/core";
+import { Button, ButtonProps } from "@chakra-ui/core";
+import { FC } from "react";
 
-export const SiteButton = (props) => (
+interface SiteButtonProps extends ButtonProps {
+  accent?: string;
+}
+
+export const SiteButton = ({ children, ...rest }: SiteButtonProps) => (
   <Button
     variant="outline"
     isFullWidth
@@ -8,7 +13,7 @@ export const SiteButton = (props) => (
     borderColor="#444"
     background="transparent"
     _hover={{
-      bg: "#444",
+      background: `#444`,
     }}
     _active={{
       bg: "#555",
@@ -18,6 +23,8 @@ export const SiteButton = (props) => (
       boxShadow:
         "0 0 1px 2px rgba(255, 200, 0, .75), 0 1px 1px rgba(0, 0, 0, .15)",
     }}
-    {...props}
-  />
+    {...rest}
+  >
+    {children}
+  </Button>
 );

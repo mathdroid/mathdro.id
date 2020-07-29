@@ -1,6 +1,11 @@
 import React from "react";
 import App from "next/app";
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import {
+  ThemeProvider,
+  CSSReset,
+  DarkMode,
+  ColorModeProvider,
+} from "@chakra-ui/core";
 import { Global, css } from "@emotion/core";
 
 import theme from "../theme";
@@ -16,7 +21,6 @@ class MyApp extends App {
             body {
               background: #111;
               min-height: 100vh;
-              padding-bottom: 8rem;
             }
             *::selection {
               text-shadow: none;
@@ -25,7 +29,9 @@ class MyApp extends App {
             }
           `}
         />
-        <Component />
+        <DarkMode>
+          <Component />
+        </DarkMode>
       </ThemeProvider>
     );
   }
