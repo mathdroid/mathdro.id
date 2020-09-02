@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/A46A8u5"
+    },
+    {
+      "source": "/instagram",
+      "destination": "https://instagram.com/mathdroid"
+    },
+    {
+      "source": "/github",
+      "destination": "https://github.com/mathdroid"
+    },
+    {
+      "source": "/twitter",
+      "destination": "https://twitter.com/mathdroid"
+    }
+  ]
+}
