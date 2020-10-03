@@ -14,7 +14,7 @@
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "next": "^9.5.2",
-    "next-seo": "^4.10.1",
+    "next-seo": "^4.11.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
