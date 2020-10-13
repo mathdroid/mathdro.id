@@ -15,6 +15,10 @@
     {
       "source": "/twitter",
       "destination": "https://twitter.com/mathdroid"
+    },
+    {
+      "source": "/calendar",
+      "destination": "https://calendly.com/mathdroid/1v1"
     }
   ]
 }
