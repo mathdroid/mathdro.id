@@ -19,6 +19,14 @@
     {
       "source": "/calendar",
       "destination": "https://calendly.com/mathdroid/1v1"
+    },
+    {
+      "source": "/talks",
+      "destination": "https://speakerdeck.com/mathdroid"
+    },
+    {
+      "source": "/talks/devfest2020",
+      "destination": "https://speakerdeck.com/mathdroid/case-study-trf-dot-money"
     }
   ]
 }
