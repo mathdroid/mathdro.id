@@ -27,6 +27,10 @@
     {
       "source": "/talks/devfest2020",
       "destination": "https://speakerdeck.com/mathdroid/case-study-trf-dot-money"
+    },
+    {
+      "source": "/sos",
+      "destination": "https://sos.mathdro.id"
     }
   ]
 }
