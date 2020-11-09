@@ -31,6 +31,10 @@
     {
       "source": "/sos",
       "destination": "https://sos.mathdro.id"
+    },
+    {
+      "source": "/podcast",
+      "destination": "https://open.spotify.com/show/3MZlJuiaizegU0D9ep2Egi"
     }
   ]
 }
