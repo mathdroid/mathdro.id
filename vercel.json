@@ -39,6 +39,10 @@
     {
       "source": "/carp/invite",
       "destination": "https://www.youtube.com/watch?v=DLzxrzFCyOs"
+    },
+    {
+      "source": "/dice",
+      "destination": "https://dice-mathdroid.vercel.app"
     }
   ]
 }
