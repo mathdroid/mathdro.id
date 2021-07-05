@@ -59,10 +59,10 @@ const Index = () => {
         <Headline alignSelf="start">COVID-19 Resources</Headline>
         <Stack spacing="1rem">
           <ButtonLink href="https://jakarta-vax-availability.vercel.app/">
-            [Web] Jakarta Vaccination Availability
+            [Web] JKT Vax Info
           </ButtonLink>
           <ButtonLink href="https://jakarta-rs-availability.vercel.app/">
-            [Web] Jakarta Vaccination Availability
+            [Web] JKT Hospital Info
           </ButtonLink>
           <ButtonLink href="https://covid19.mathdro.id">
             COVID-19 API
