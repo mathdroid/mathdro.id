@@ -64,6 +64,9 @@ const Index = () => {
           <ButtonLink href="https://jakarta-rs-availability.vercel.app/">
             [Web] JKT Hospital Info
           </ButtonLink>
+          <ButtonLink href="https://oksigen.carrd.co/">
+            [Web] Informasi Tabung Oksigen
+          </ButtonLink>
           <ButtonLink href="https://covid19.mathdro.id">
             COVID-19 API
           </ButtonLink>
