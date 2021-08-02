@@ -38,10 +38,10 @@ const MainHeader = ({ title }) => {
       px="1rem"
     >
       {isAlert ? (
-        <Alert status="warning" w="100%" my="1rem">
+        <Alert status="warning" w="100%" borderRadius="8px" my="1rem">
           <AlertIcon />
           <Text color="#aaa">
-            Site is still under reconstruction (Late July 2020). Be patient!
+            Site is still under reconstruction (Late July 2021). Be patient!
           </Text>
           <CloseButton
             position="absolute"
