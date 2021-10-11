@@ -13,10 +13,12 @@
     "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "emotion-theming": "^10.0.27",
+    "isomorphic-unfetch": "^3.1.0",
     "next": "^9.5.5",
     "next-seo": "^4.26.0",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "twitter-v2": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^16.4.10",
