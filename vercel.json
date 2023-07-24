@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/discord",
-      "destination": "https://discord.gg/HPxA6Ft"
+      "destination": "https://discord.gg"
     },
     {
       "source": "/instagram",
@@ -18,7 +18,7 @@
     },
     {
       "source": "/calendar",
-      "destination": "https://www.usemotion.com/meet/mathdroid/meeting"
+      "destination": "https://cal.com/mathdroid"
     },
     {
       "source": "/talks",
