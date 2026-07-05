@@ -25,16 +25,6 @@ export default async function OpengraphImage() {
         <div style={{ fontSize: 52, letterSpacing: 1 }}>
           This page is intentionally left blank.
         </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 48,
-            fontSize: 28,
-            color: "#888",
-          }}
-        >
-          ssh mathdro.id
-        </div>
       </div>
     ),
     {
