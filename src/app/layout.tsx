@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     "This page is intentionally left blank. No content is provided, none is forthcoming, and nothing has been omitted in error. Try: ssh mathdro.id",
   openGraph: {
     siteName: "mathdro.id",
-    title: "This page is intentionally left blank.",
-    description: "Nothing is missing.",
+    title: "mathdro.id",
+    description: "This page is intentionally left blank.",
   },
 };
 
