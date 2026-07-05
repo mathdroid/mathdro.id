@@ -33,7 +33,7 @@ export default async function OpengraphImage() {
             color: "#888",
           }}
         >
-          1
+          ssh mathdro.id
         </div>
       </div>
     ),

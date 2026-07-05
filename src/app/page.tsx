@@ -4,18 +4,6 @@ export default function Page() {
       <p style={{ fontSize: "1.25rem", letterSpacing: "0.02em" }}>
         This page is intentionally left blank.
       </p>
-      <span
-        style={{
-          position: "fixed",
-          bottom: "2rem",
-          left: 0,
-          right: 0,
-          fontSize: "0.875rem",
-          color: "#888",
-        }}
-      >
-        1
-      </span>
     </main>
   );
 }
