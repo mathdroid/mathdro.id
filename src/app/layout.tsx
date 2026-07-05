@@ -29,7 +29,7 @@ export default function RootLayout({
           minHeight: "100dvh",
           display: "grid",
           placeItems: "center",
-          background: "#fbf9f4",
+          background: "#eae7e0",
           color: "#222",
         }}
       >
