@@ -1,3 +1,7 @@
 # mathdro.id
 
-Hello
+This page is intentionally left blank.
+
+```
+ssh mathdro.id
+```
