@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "mathdro.id",
     title: "This page is intentionally left blank.",
-    description:
-      "This page is intentionally left blank. Nothing is missing. For the interactive edition: ssh mathdro.id",
+    description: "Nothing is missing.",
   },
 };
 
