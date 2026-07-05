@@ -5,8 +5,15 @@ const garamond = localFont({ src: "./eb-garamond.ttf" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mathdro.id"),
-  title: "mathdro.id",
-  description: "This page is intentionally left blank.",
+  title: "mathdro.id - This page is intentionally left blank.",
+  description:
+    "This page is intentionally left blank. No content is provided, none is forthcoming, and nothing has been omitted in error. Try: ssh mathdro.id",
+  openGraph: {
+    siteName: "mathdro.id",
+    title: "This page is intentionally left blank.",
+    description:
+      "This page is intentionally left blank. Nothing is missing. For the interactive edition: ssh mathdro.id",
+  },
 };
 
 export default function RootLayout({
@@ -22,7 +29,7 @@ export default function RootLayout({
           minHeight: "100dvh",
           display: "grid",
           placeItems: "center",
-          background: "#fbf9f4",
+          background: "#eae7e0",
           color: "#222",
         }}
       >
