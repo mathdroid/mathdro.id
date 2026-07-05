@@ -19,20 +19,19 @@ export default function Canvas() {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
 
-    const scale = () => canvas.width / devicePixelRatio / 1000;
-
+    // ponytail: strokes are normalized per-axis to the viewport, so they
+    // stretch a bit between screen shapes; fine for doodles
     const drawStroke = (s: Stroke) => {
-      const k = scale() * devicePixelRatio;
-      ctx.setTransform(k, 0, 0, k, 0, 0);
-      ctx.lineWidth = 3;
+      ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+      const w = canvas.width / devicePixelRatio;
+      const h = canvas.height / devicePixelRatio;
+      ctx.lineWidth = 2.5;
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
       ctx.strokeStyle = s.color;
       ctx.beginPath();
       s.points.forEach(([x, y], i) => {
-        const px = x * 1000;
-        const py = y * 1414;
-        i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+        i === 0 ? ctx.moveTo(x * w, y * h) : ctx.lineTo(x * w, y * h);
       });
       ctx.stroke();
     };
