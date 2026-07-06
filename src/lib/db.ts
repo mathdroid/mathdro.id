@@ -50,6 +50,10 @@ export function strokeCount(day: string): number {
   ).n;
 }
 
+export function clearStrokes(day: string) {
+  db.prepare("DELETE FROM strokes WHERE day = ?").run(day);
+}
+
 export const isPosted = (day: string) =>
   !!db.prepare("SELECT 1 FROM posted WHERE day = ?").get(day);
 

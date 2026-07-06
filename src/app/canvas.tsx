@@ -12,6 +12,8 @@ export default function Canvas() {
   const current = useRef<Point[] | null>(null);
   const clientId = useRef(Math.random().toString(36).slice(2, 10));
   const [color, setColor] = useState(COLORS[0]);
+  const [hidden, setHidden] = useState(false);
+  const [reported, setReported] = useState(false);
   const colorRef = useRef(color);
   colorRef.current = color;
 
@@ -61,6 +63,11 @@ export default function Canvas() {
     const es = new EventSource("/api/strokes/stream");
     es.onmessage = (e) => {
       const s = JSON.parse(e.data);
+      if (s.type === "clear") {
+        strokes.current = [];
+        redraw();
+        return;
+      }
       if (s.client === clientId.current) return;
       strokes.current.push(s);
       drawStroke(s);
@@ -116,6 +123,22 @@ export default function Canvas() {
     };
   }, []);
 
+  const report = () => {
+    setReported(true);
+    // 429 = someone else already reported this hour; same outcome for the visitor
+    fetch("/api/report", { method: "POST" }).catch(() => {});
+  };
+
+  const textBtn = {
+    fontSize: "0.75rem",
+    background: "none",
+    border: "none",
+    padding: 0,
+    color: "#999",
+    cursor: "pointer",
+    textDecoration: "underline",
+  } as const;
+
   return (
     <>
       <canvas
@@ -127,6 +150,7 @@ export default function Canvas() {
           height: "100%",
           touchAction: "none",
           cursor: "crosshair",
+          visibility: hidden ? "hidden" : "visible",
         }}
       />
       <div
@@ -137,25 +161,35 @@ export default function Canvas() {
           right: 0,
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
           gap: "0.5rem",
         }}
       >
-        {COLORS.map((c) => (
-          <button
-            key={c}
-            aria-label={`draw in ${c}`}
-            onClick={() => setColor(c)}
-            style={{
-              width: "1.1rem",
-              height: "1.1rem",
-              borderRadius: "50%",
-              border: c === color ? "2px solid #888" : "2px solid transparent",
-              background: c,
-              padding: 0,
-              cursor: "pointer",
-            }}
-          />
-        ))}
+        {!hidden &&
+          COLORS.map((c) => (
+            <button
+              key={c}
+              aria-label={`draw in ${c}`}
+              onClick={() => setColor(c)}
+              style={{
+                width: "1.1rem",
+                height: "1.1rem",
+                borderRadius: "50%",
+                border: c === color ? "2px solid #888" : "2px solid transparent",
+                background: c,
+                padding: 0,
+                cursor: "pointer",
+              }}
+            />
+          ))}
+        <button onClick={() => setHidden(!hidden)} style={textBtn}>
+          {hidden ? "show drawings" : "hide"}
+        </button>
+        {!hidden && (
+          <button onClick={report} disabled={reported} style={textBtn}>
+            {reported ? "reported" : "report"}
+          </button>
+        )}
       </div>
     </>
   );
