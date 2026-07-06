@@ -1,4 +1,11 @@
-import { addStroke, getStrokes, strokeCount, today, type Stroke } from "@/lib/db";
+import {
+  addStroke,
+  clearStrokes,
+  getStrokes,
+  strokeCount,
+  today,
+  type Stroke,
+} from "@/lib/db";
 import { publish } from "@/lib/bus";
 import { COLORS } from "@/lib/colors";
 
@@ -45,5 +52,15 @@ export async function POST(req: Request) {
   };
   addStroke(day, stroke);
   publish({ ...stroke, client: body.client });
+  return Response.json({ ok: true });
+}
+
+// admin wipe: curl -X DELETE -H "Authorization: Bearer $ADMIN_TOKEN" https://mathdro.id/api/strokes
+export async function DELETE(req: Request) {
+  const token = process.env.ADMIN_TOKEN;
+  if (!token || req.headers.get("authorization") !== `Bearer ${token}`)
+    return new Response("nope", { status: 401 });
+  clearStrokes(today());
+  publish({ type: "clear" });
   return Response.json({ ok: true });
 }
