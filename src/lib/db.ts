@@ -37,12 +37,22 @@ export function addStroke(day: string, stroke: Stroke) {
   );
 }
 
-export function getStrokes(day: string): Stroke[] {
-  return db
-    .prepare("SELECT color, points FROM strokes WHERE day = ? ORDER BY id")
-    .all(day)
-    .map((r: any) => ({ color: r.color, points: JSON.parse(r.points) }));
+// with a limit, returns the most recent `limit` strokes in draw order (oldest first)
+export function getStrokes(day: string, limit?: number): Stroke[] {
+  const rows = limit
+    ? db
+        .prepare(
+          "SELECT color, points FROM strokes WHERE day = ? ORDER BY id DESC LIMIT ?",
+        )
+        .all(day, limit)
+        .reverse()
+    : db
+        .prepare("SELECT color, points FROM strokes WHERE day = ? ORDER BY id")
+        .all(day);
+  return rows.map((r: any) => ({ color: r.color, points: JSON.parse(r.points) }));
 }
+
+export const RENDER_LIMIT = 10_000;
 
 export function strokeCount(day: string): number {
   return (

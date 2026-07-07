@@ -21,6 +21,14 @@ export default function Canvas() {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
 
+    // rolling window: keep only the most recent 10k strokes in memory
+    const CAP = 10_000;
+    const push = (s: Stroke) => {
+      strokes.current.push(s);
+      if (strokes.current.length > CAP)
+        strokes.current.splice(0, strokes.current.length - CAP);
+    };
+
     // ponytail: strokes are normalized per-axis to the viewport, so they
     // stretch a bit between screen shapes; fine for doodles
     const drawStroke = (s: Stroke) => {
@@ -69,7 +77,7 @@ export default function Canvas() {
         return;
       }
       if (s.client === clientId.current) return;
-      strokes.current.push(s);
+      push(s);
       drawStroke(s);
     };
 
@@ -100,7 +108,7 @@ export default function Canvas() {
       current.current = null;
       if (!pts || pts.length < 2) return;
       const stroke = { color: colorRef.current, points: pts };
-      strokes.current.push(stroke);
+      push(stroke);
       fetch("/api/strokes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
