@@ -16,6 +16,9 @@ export default function Page() {
           letterSpacing: "0.02em",
           textAlign: "center",
           userSelect: "none",
+          // above the canvas so drawings never cover it; clicks pass through
+          zIndex: 1,
+          pointerEvents: "none",
         }}
       >
         This page is intentionally left blank.
