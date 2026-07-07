@@ -1,7 +1,14 @@
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { getStrokes, isPosted, markPosted, yesterday, type Stroke } from "./db";
+import {
+  getStrokes,
+  isPosted,
+  markPosted,
+  RENDER_LIMIT,
+  yesterday,
+  type Stroke,
+} from "./db";
 
 const PAGE = { w: 1000, h: 1414 };
 
@@ -80,7 +87,7 @@ async function postDrawingOfTheDay() {
 
   const day = yesterday();
   if (isPosted(day)) return;
-  const strokes = getStrokes(day);
+  const strokes = getStrokes(day, RENDER_LIMIT);
   if (strokes.length === 0) {
     markPosted(day); // nothing drawn, nothing to post
     return;

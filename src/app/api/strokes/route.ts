@@ -2,6 +2,7 @@ import {
   addStroke,
   clearStrokes,
   getStrokes,
+  RENDER_LIMIT,
   strokeCount,
   today,
   type Stroke,
@@ -13,7 +14,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   const day = today();
-  return Response.json({ day, strokes: getStrokes(day) });
+  return Response.json({ day, strokes: getStrokes(day, RENDER_LIMIT) });
 }
 
 function valid(body: any): body is Stroke & { client: string } {
