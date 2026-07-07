@@ -34,9 +34,25 @@ function valid(body: any): body is Stroke & { client: string } {
   );
 }
 
+// ponytail: in-memory per-ip sliding window, resets on restart; single instance
+const hits: Map<string, number[]> = ((globalThis as any).__strokeHits ??=
+  new Map());
+
+function rateLimited(ip: string) {
+  if (hits.size > 10_000) hits.clear();
+  const now = Date.now();
+  const recent = (hits.get(ip) ?? []).filter((t) => now - t < 60_000);
+  recent.push(now);
+  hits.set(ip, recent);
+  return recent.length > 20;
+}
+
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
   if (!valid(body)) return new Response("bad stroke", { status: 400 });
+
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "?";
+  if (rateLimited(ip)) return new Response("slow down", { status: 429 });
 
   const day = today();
   // ponytail: crude flood cap instead of per-IP rate limiting; add real limiting if it gets griefed

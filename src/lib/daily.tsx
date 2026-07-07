@@ -31,9 +31,6 @@ export async function renderDay(day: string, strokes: Stroke[]) {
           position: "relative",
         }}
       >
-        <div style={{ fontSize: 26, letterSpacing: 0.5 }}>
-          This page is intentionally left blank.
-        </div>
         <svg
           width={PAGE.w}
           height={PAGE.h}
@@ -52,6 +49,10 @@ export async function renderDay(day: string, strokes: Stroke[]) {
             />
           ))}
         </svg>
+        {/* after the svg so drawings never cover the text, matching the live page */}
+        <div style={{ fontSize: 26, letterSpacing: 0.5 }}>
+          This page is intentionally left blank.
+        </div>
         <div
           style={{
             position: "absolute",
